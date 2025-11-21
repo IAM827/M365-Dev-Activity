@@ -20,4 +20,4 @@ See `/logs/weekly-log.csv` for a timestamped record of all activity.
 
 ## Graph API Activity
 - Queried all users in tenant using `GET /users`
-- [Query]([graph-api/list-users-query.txt](https://github.com/IAM827/M365-Dev-Activity/blob/main/Graph-API/List-Users-Query.txt)) | [Response](graph-api/list-users-response.json)
+- [Query](https://github.com/IAM827/M365-Dev-Activity/blob/main/Graph-API/List-Users-Query.txt) | [Response]([graph-api/list-users-response.json](https://github.com/IAM827/M365-Dev-Activity/blob/main/Graph-API/List-Users-Response.json))
