@@ -1,1 +1,286 @@
-
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users",
+    "@microsoft.graph.tips": "This request only returns a subset of the resource's properties. Your app will need to use $select to return non-default properties. To find out what other properties are available for this resource see https://learn.microsoft.com/graph/api/resources/user",
+    "value": [
+        {
+            "businessPhones": [
+                "0839427208"
+            ],
+            "displayName": "Admin",
+            "givenName": "Admin",
+            "jobTitle": "IT Administrator",
+            "mail": "admin@thelhub.co.za",
+            "mobilePhone": "0839427208",
+            "officeLocation": "South Africa",
+            "preferredLanguage": "en",
+            "surname": "Istrator",
+            "userPrincipalName": "admin@thelhub.co.za",
+            "id": "e8e51b86-f564-4ad1-a234-c6c7ad812a18"
+        },
+        {
+            "businessPhones": [
+                "+27 26 483 3500"
+            ],
+            "displayName": "Amanda Hall",
+            "givenName": "Amanda",
+            "jobTitle": "Sales Executive",
+            "mail": "amanda.hall@thelhub.co.za",
+            "mobilePhone": "+27 78 168 2494",
+            "officeLocation": "781",
+            "preferredLanguage": null,
+            "surname": "Hall",
+            "userPrincipalName": "amanda.hall@thelhub.co.za",
+            "id": "ad14ad15-1682-4a36-9bb3-9a785e89df9f"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Chad",
+            "givenName": "Chad",
+            "jobTitle": null,
+            "mail": "Chad@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": null,
+            "userPrincipalName": "Chad@thelhub.co.za",
+            "id": "19d43fa4-4373-4745-91cf-a6b60a55a167"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Chardelin Mbemba",
+            "givenName": "Chardelin",
+            "jobTitle": null,
+            "mail": null,
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": "Mbemba",
+            "userPrincipalName": "Chard@thelhub.co.za",
+            "id": "94252c19-63ce-4e43-8bb2-10793cffe23e"
+        },
+        {
+            "businessPhones": [
+                "536-654-9870"
+            ],
+            "displayName": "Dollar",
+            "givenName": null,
+            "jobTitle": null,
+            "mail": "Dollar@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": "United States",
+            "preferredLanguage": null,
+            "surname": null,
+            "userPrincipalName": "Dollar@thelhub.co.za",
+            "id": "f645aa4b-a382-44dc-863a-25eb30306e15"
+        },
+        {
+            "businessPhones": [
+                "+27 38 582 1718"
+            ],
+            "displayName": "Eighth User",
+            "givenName": "Eighth",
+            "jobTitle": "Music Producer",
+            "mail": "eighthuser@thelhub.co.za",
+            "mobilePhone": "+27 72 979 2286",
+            "officeLocation": "Johannesburg",
+            "preferredLanguage": null,
+            "surname": "User",
+            "userPrincipalName": "eighthuser@thelhub.co.za",
+            "id": "4c8f6b3c-f532-4da5-967d-be5ef1199af2"
+        },
+        {
+            "businessPhones": [
+                "458-965-8736"
+            ],
+            "displayName": "Euro",
+            "givenName": null,
+            "jobTitle": null,
+            "mail": "Euro@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": "France",
+            "preferredLanguage": null,
+            "surname": null,
+            "userPrincipalName": "Euro@thelhub.co.za",
+            "id": "283d8a4e-8eb2-4ece-a39a-9b64ba126d77"
+        },
+        {
+            "businessPhones": [
+                "+27 88 992 7227"
+            ],
+            "displayName": "First User",
+            "givenName": "First",
+            "jobTitle": "Tour Manager",
+            "mail": "firstuser@thelhub.co.za",
+            "mobilePhone": "+27 71 612 3003",
+            "officeLocation": "Johannesburg",
+            "preferredLanguage": null,
+            "surname": "User",
+            "userPrincipalName": "firstuser@thelhub.co.za",
+            "id": "17ea6753-8a38-4f98-a6b6-a2905356e5b7"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Info",
+            "givenName": "Info",
+            "jobTitle": null,
+            "mail": "info@illmaticbeats.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": null,
+            "userPrincipalName": "info@illmaticbeats.co.za",
+            "id": "adb9ac45-f340-4ecc-a082-0c1e2bce02cf"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Info",
+            "givenName": "Info",
+            "jobTitle": null,
+            "mail": "info@techyman.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": null,
+            "userPrincipalName": "info@techyman.co.za",
+            "id": "7d70e798-ace4-488d-8d7d-19f21574d813"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Jason Khama",
+            "givenName": "Jason",
+            "jobTitle": null,
+            "mail": "Jason@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": "Khama",
+            "userPrincipalName": "Jason@thelhub.co.za",
+            "id": "d8d38819-c896-4ea9-b19a-655f39d6c4a5"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Marie Blanche",
+            "givenName": "Marie",
+            "jobTitle": null,
+            "mail": "Marie@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": "Blanche",
+            "userPrincipalName": "Marie@thelhub.co.za",
+            "id": "d56ed8ea-798e-4e11-9030-8dccb8ef3146"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Mark Masvikeni",
+            "givenName": "Mark",
+            "jobTitle": null,
+            "mail": "Markm@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": "Masvikeni",
+            "userPrincipalName": "Markm@thelhub.co.za",
+            "id": "959ce156-6bd7-4944-ae3f-43b2d4cc278c"
+        },
+        {
+            "businessPhones": [
+                "+27 56 111 5922"
+            ],
+            "displayName": "Nineth User",
+            "givenName": "Nineth",
+            "jobTitle": "Music Producer",
+            "mail": "ninethuser@thelhub.co.za",
+            "mobilePhone": "+27 76 600 9591",
+            "officeLocation": "Johannesburg",
+            "preferredLanguage": null,
+            "surname": "User",
+            "userPrincipalName": "ninethuser@thelhub.co.za",
+            "id": "5f6671db-69b0-4abc-b581-478b776bbded"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Thabile Ngcobo",
+            "givenName": "Thabile",
+            "jobTitle": null,
+            "mail": "Nono@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": "Ngcobo",
+            "userPrincipalName": "Nono@thelhub.co.za",
+            "id": "79949ae9-7995-4c00-80bf-2c2f60b45faf"
+        },
+        {
+            "businessPhones": [
+                "437-952-0178"
+            ],
+            "displayName": "Pound",
+            "givenName": null,
+            "jobTitle": null,
+            "mail": "Pound@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": "United Kingdom",
+            "preferredLanguage": null,
+            "surname": null,
+            "userPrincipalName": "Pound@thelhub.co.za",
+            "id": "5a1e52ab-bb50-41e6-b48d-4ee8b13784a0"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Prudence Ntumelang",
+            "givenName": "Prudence",
+            "jobTitle": null,
+            "mail": "Prudence@thelhub.co.za",
+            "mobilePhone": "0728867424",
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": "Ntumelang",
+            "userPrincipalName": "Prudence@thelhub.co.za",
+            "id": "69de56fa-2632-471d-89dd-bd20ff110623"
+        },
+        {
+            "businessPhones": [
+                "+27 96 900 6401"
+            ],
+            "displayName": "Second User",
+            "givenName": "Second",
+            "jobTitle": "Music Video Director",
+            "mail": "seconduser@thelhub.co.za",
+            "mobilePhone": "+27 76 761 5790",
+            "officeLocation": "Johannesburg",
+            "preferredLanguage": null,
+            "surname": "User",
+            "userPrincipalName": "seconduser@thelhub.co.za",
+            "id": "5c1679bc-fb18-40f1-b5ce-67cfe0b0e10c"
+        },
+        {
+            "businessPhones": [],
+            "displayName": "Storage",
+            "givenName": "Store",
+            "jobTitle": "Data Storer",
+            "mail": "Storage@thelhub.co.za",
+            "mobilePhone": null,
+            "officeLocation": null,
+            "preferredLanguage": null,
+            "surname": "Age",
+            "userPrincipalName": "Storage@thelhub.co.za",
+            "id": "5a96e8d7-84f7-490e-963b-c9943cd81e8e"
+        },
+        {
+            "businessPhones": [
+                "+27 10 426 2007"
+            ],
+            "displayName": "Third User",
+            "givenName": "Third",
+            "jobTitle": "Sound Engineer",
+            "mail": "thirduser@thelhub.co.za",
+            "mobilePhone": "+27 70 526 7384",
+            "officeLocation": "Johannesburg",
+            "preferredLanguage": null,
+            "surname": "User",
+            "userPrincipalName": "thirduser@thelhub.co.za",
+            "id": "976a7259-d253-4084-884a-cf4f521de774"
+        }
+    ]
+}
