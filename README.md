@@ -17,3 +17,7 @@ See `/logs/weekly-log.csv` for a timestamped record of all activity.
 - Microsoft Graph Explorer
 - SharePoint
 - GitHub
+
+## Graph API Activity
+- Queried all users in tenant using `GET /users`
+- [Query](graph-api/list-users-query.txt) | [Response](graph-api/list-users-response.json)
