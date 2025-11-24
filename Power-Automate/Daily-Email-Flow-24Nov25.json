@@ -1,1 +1,186 @@
-
+{
+    "name": "b8eb2297-9e5d-43f7-b862-79e6e053691a",
+    "id": "/providers/Microsoft.Flow/flows/b8eb2297-9e5d-43f7-b862-79e6e053691a",
+    "type": "Microsoft.Flow/flows",
+    "properties": {
+        "apiId": "/providers/Microsoft.PowerApps/apis/shared_logicflows",
+        "displayName": "Log Dev Activity To SharePoint",
+        "definition": {
+            "metadata": {
+                "workflowEntityId": null,
+                "processAdvisorMetadata": null,
+                "flowChargedByPaygo": null,
+                "flowclientsuspensionreason": "None",
+                "flowclientsuspensiontime": null,
+                "flowclientsuspensionreasondetails": null,
+                "creator": {
+                    "id": "e8e51b86-f564-4ad1-a234-c6c7ad812a18",
+                    "type": "User",
+                    "tenantId": "fec1f89f-86b5-41e0-8516-8b9db93ee243"
+                },
+                "provisioningMethod": "FromDefinition",
+                "failureAlertSubscription": true,
+                "clientLastModifiedTime": "2025-11-21T02:17:56.5996639Z",
+                "connectionKeySavedTimeKey": "2025-11-21T02:17:56.5996639Z",
+                "creationSource": "Portal",
+                "modifiedSources": "Portal"
+            },
+            "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+            "contentVersion": "undefined",
+            "parameters": {
+                "$authentication": {
+                    "defaultValue": {},
+                    "type": "SecureObject"
+                },
+                "$connections": {
+                    "defaultValue": {},
+                    "type": "Object"
+                }
+            },
+            "triggers": {
+                "Recurrence": {
+                    "recurrence": {
+                        "frequency": "Day",
+                        "interval": 3,
+                        "startTime": "2025-11-21T08:00:00.000Z",
+                        "schedule": {},
+                        "timeZone": "South Africa Standard Time"
+                    },
+                    "evaluatedRecurrence": {
+                        "frequency": "Day",
+                        "interval": 3,
+                        "startTime": "2025-11-21T08:00:00.000Z",
+                        "schedule": {},
+                        "timeZone": "South Africa Standard Time"
+                    },
+                    "type": "Recurrence"
+                }
+            },
+            "actions": {
+                "ToolUsed": {
+                    "runAfter": {},
+                    "type": "InitializeVariable",
+                    "inputs": {
+                        "variables": [
+                            {
+                                "name": "ToolUsed",
+                                "type": "string",
+                                "value": "Power Automate"
+                            }
+                        ]
+                    }
+                },
+                "Description": {
+                    "runAfter": {
+                        "ToolUsed": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "InitializeVariable",
+                    "inputs": {
+                        "variables": [
+                            {
+                                "name": "Description",
+                                "type": "string",
+                                "value": "Implemented Weekly Activity Logger Flow"
+                            }
+                        ]
+                    }
+                },
+                "GitHubLink": {
+                    "runAfter": {
+                        "Description": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "InitializeVariable",
+                    "inputs": {
+                        "variables": [
+                            {
+                                "name": "GitHubLink",
+                                "type": "string",
+                                "value": "https://github.com/IAM827/M365-Dev-Activity/blob/main/Power-Automate/Daily-Email-Flow.json"
+                            }
+                        ]
+                    }
+                },
+                "Compose": {
+                    "runAfter": {
+                        "GitHubLink": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "Compose",
+                    "inputs": "@{formatDateTime(utcNow(), 'yyyy-MM-dd')}|@{variables('ToolUsed')}|@{variables('Description')}|@{variables('GitHubLink')}"
+                },
+                "Create_item": {
+                    "runAfter": {
+                        "Compose": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                        "parameters": {
+                            "dataset": "https://thelhub.sharepoint.com/sites/DevTestingTeam",
+                            "table": "2933ef15-6fcc-46ea-9ad0-b9051e9b2862",
+                            "item/Dates": "@formatDateTime(utcNow(), 'yyyy-MM-dd')",
+                            "item/ToolUsed": "@variables('ToolUsed')",
+                            "item/Description": "@variables('Description')",
+                            "item/GitHubLink": "@variables('GitHubLink')"
+                        },
+                        "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                            "connectionName": "shared_sharepointonline",
+                            "operationId": "PostItem"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                    }
+                },
+                "Post_message_in_a_chat_or_channel": {
+                    "runAfter": {
+                        "Create_item": [
+                            "Succeeded"
+                        ]
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                        "parameters": {
+                            "poster": "Flow bot",
+                            "location": "Channel",
+                            "body/recipient/groupId": "41612430-7b27-4a16-8143-9aa172e7891f",
+                            "body/recipient/channelId": "19:fa455f8656004f53bee8487ae0204ff7@thread.tacv2",
+                            "body/messageBody": "<p class=\"editor-paragraph\">✅ Dev Activity Logged Successfully!</p><br><p class=\"editor-paragraph\">@{outputs('Compose')}</p>"
+                        },
+                        "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                            "connectionName": "shared_teams",
+                            "operationId": "PostMessageToConversation"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                    }
+                }
+            }
+        },
+        "connectionReferences": {
+            "shared_sharepointonline": {
+                "connectionName": "shared-sharepointonl-87862003-898e-452b-b5d5-5f6f593782ba",
+                "source": "Embedded",
+                "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                "tier": "NotSpecified",
+                "apiName": "sharepointonline",
+                "isProcessSimpleApiReferenceConversionAlreadyDone": false
+            },
+            "shared_teams": {
+                "connectionName": "shared-teams-97e1f558-645f-4722-b203-3e262d8f4882",
+                "source": "Embedded",
+                "id": "/providers/Microsoft.PowerApps/apis/shared_teams",
+                "tier": "NotSpecified",
+                "apiName": "teams",
+                "isProcessSimpleApiReferenceConversionAlreadyDone": false
+            }
+        },
+        "flowFailureAlertSubscribed": false,
+        "isManaged": false
+    }
+}
