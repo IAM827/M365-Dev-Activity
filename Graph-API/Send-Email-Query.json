@@ -1,0 +1,17 @@
+{
+  "message": {
+    "subject": "Test Email from Graph API",
+    "body": {
+      "contentType": "Text",
+      "content": "Hello User, this is a test email sent via Microsoft Graph API!"
+    },
+    "toRecipients": [
+      {
+        "emailAddress": {
+          "address": "your-email@yourdomain.com"
+        }
+      }
+    ]
+  }
+}
+
